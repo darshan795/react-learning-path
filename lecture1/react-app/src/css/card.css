@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+.card{
+    height:210px;
+    width: 200px;
+    background-color:white;
+    border-radius:5px;
+    /* padding:5px */
+
+
+}
+.image{
+    width:200px;
+        height:110px;
+
+
+}
+.image img{
+    height:100%;
+    width:100%;
+    object-fit: covers;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.body-part h3{
+font-size:0.9rem;
+
+
+
+}
+.body-part{
+    padding:0.4rem 0;
+
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+    padding:7px;
+}
+.body-part p{
+    font-size:0.8rem;
+}
+.body-part button{
+    padding:0.2rem 0.5rem;
+    border-radius:20px;
+    border:none;
+    background-color:#03045e;
+    color:white;
+}
