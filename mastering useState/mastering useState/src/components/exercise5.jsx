@@ -2,19 +2,19 @@ import React ,{useState} from "react";
 
 function Exercise5(){
     const [word,setCountwords]=useState("");
-    const [wc,setCount]=useState(0);
-    const [c,setChar]=useState(0);
+    // const [wc,setCount]=useState(0);
+    // const [c,setChar]=useState(0);
     
     function  countingWords(event){
         
         setCountwords(event.target.value);
     
-         setCount(word.trim()===""?0:word.trim().split(/\s+/).length)
-         setChar(word.length)
-
-       
+        
+        
     }
-
+    
+    const c=word.length
+    const wc=word.trim()===""?0:word.trim().split(/\s+/).length
 
 
     return  (<> 
@@ -26,7 +26,7 @@ function Exercise5(){
             </div>
 
             <div className="input">
-                <textarea  placeholder="Enter the words" onChange={countingWords}  className={`bg-white border h-15 w-150 py-4 px-4 resize-none overflow-y-hidden ${c>200?"text-red-500":"text-black"} rounded-[50px]`}></textarea>
+                <textarea  maxLength={200} placeholder="Enter the words" onChange={countingWords}  className={`bg-white border h-15 w-150 py-4 px-4 resize-none overflow-y-hidden ${c>200?"text-red-500":"text-black"} rounded-[50px]`}></textarea>
 
             </div>
             <div  className="display  flex justify-center gap-20">
