@@ -13,7 +13,7 @@ function App() {
   
 
   return <>
-  <div className='main font-["inter"]  h-screen  w-full bg-gray-200 flex justify-center items-center'>
+  <div className='main font-["inter"]  h-screen  w-full bg-zinc-200 flex justify-center items-center'>
   <Exercise6/>
   </div>
   </>
