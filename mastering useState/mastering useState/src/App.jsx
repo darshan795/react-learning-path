@@ -9,12 +9,16 @@ import Exercise3 from './components/exercise3'
 import Exercise4 from './components/exercise4'
 import Exercise5 from './components/exercise5'
 import Exercise6 from './components/exercise6'
+import Exercise7 from './components/exercise7'
 function App() {
   
 
   return <>
-  <div className='main font-["inter"]  h-screen  w-full bg-zinc-200 flex justify-center items-center'>
-  <Exercise6/>
+  <div  style={{
+    background:"linear-gradient(135deg, #0C1D62 10%,#4D0760 90% )"
+  }}
+  className='main font-["poppins"]  h-screen  w-full  flex justify-center   items-center'>
+  <Exercise7/>
   </div>
   </>
 }
