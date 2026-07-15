@@ -10,15 +10,17 @@ import Exercise4 from './components/exercise4'
 import Exercise5 from './components/exercise5'
 import Exercise6 from './components/exercise6'
 import Exercise7 from './components/exercise7'
+import Exercise8 from './components/exercise8'
 function App() {
   
 
   return <>
   <div  style={{
-    background:"linear-gradient(135deg, #0C1D62 10%,#4D0760 90% )"
+    // background:"linear-gradient(135deg, #0C1D62 10%,#4D0760 90% )"
   }}
-  className='main font-["poppins"]  h-screen  w-full  flex justify-center   items-center'>
-  <Exercise7/>
+  // className='main font-["poppins"]  h-screen  w-full  flex justify-center   items-center'
+  >
+  <Exercise8/>
   </div>
   </>
 }
