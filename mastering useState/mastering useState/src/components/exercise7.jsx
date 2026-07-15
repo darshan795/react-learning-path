@@ -11,28 +11,62 @@ function Exercise7(){
     const [Tasks,setAddTask]=useState([]);
     const inputRef=useRef(null);
     const [isDone,setIsDone]=useState("false");
+    const [obj,setObj]=useState([]);
      console.log(inputRef.current);
     const values="";
     //this is the values that has to be done with the functionalities
+     let id=1;
+
     function handleSubmit(event){
         // console.log(event);
-     
-        setAddTask([...Tasks,inputRef.current.value])
+        const  status=false;
+        setObj([...obj,{
+            id:obj.length+1,
+            task:inputRef.current.value,
+            status:status
+        }])
+        id=id+1;
+        
+        console.log(id);
+       
         
         
         inputRef.current.value=""
         
         
     }
-    console.log(Tasks)
-    function handleClicks(){
-        setIsDone((prev)=>{
-            return !prev
-        })
-    }
+    console.log(obj)
     
+    // function handleClicks(){
+    //     setIsDone((prev)=>{
+    //         return !prev
+    //     })
+    //     setObj([...prev,])
+
+    // }
+    function toggleStatus(id) {
+    setObj(
+        obj.map((task) => {
+            if (task.id === id) {
+                return {
+                    ...task,
+                    status: !task.status,
+                };
+            }
+
+            return task;
+        })
+    );
+}
+function deleteFuncn(id){
+    
+        
+setObj(
+    obj.filter((task)=>task.id!=id)
+);
 
 
+}
 
     const tasks=["hey this is new task","this is the brand  new task","completing  the task for the day 3  dddddddddddddd             ddddddddddddn x   x   dddddddddd dddddd dddd dddd ddddddddddd dddddddddd"]
 
@@ -53,18 +87,18 @@ function Exercise7(){
             </div>
             <div className="lists flex flex-col gap-2 ">
                
-                {Tasks.map((task,idx)=>{
+                {obj.map((tt,idx)=>{
                     return ( <div key={idx} className="options   w-70 flex items-center justify-between px-3 py-2 text-zinc-400">
 
-                <span className="options flex  items-center gap-2   "><input type="checkbox"  onClick={handleClicks}  ></input><p className={`${!isDone?"line-through":""} w-50 h-auto  `} >{task} </p> </span>
-                <RxCross2/>
+                <span className="options flex  items-center gap-2   "><input type="checkbox"  onClick={()=>{toggleStatus(tt.id)}}  ></input><p className={`${tt.status?"line-through":""} w-50 h-auto  `} >{tt.task} </p> </span>
+                <RxCross2 onClick={()=>{deleteFuncn(tt.id)}}/>
                 </div>)
 
 
                 })}
                 
                 
-         
+                
                 
 
 
