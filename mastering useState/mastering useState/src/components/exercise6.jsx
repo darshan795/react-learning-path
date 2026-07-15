@@ -20,14 +20,14 @@ function Exercise6(){
        return  a.toLowerCase().includes(search.toLowerCase());
 
      })
-     console.log(result);
+     
     return <>
     <div className="search-bar flex flex-col gap-16 bg-white px-10 py-10 rounded-[10px]">
         <div className="header">
             <h1 className="   flex justify-center items-center gap-4 text-2xl"> Search Technologies  <FaSearch/> </h1>
         </div>
         <div className="search flex justify-center items-center relative ">
-             <input onChange={handleSearch} className="border px-12 py-2 rounded-[50px] w-100" placeholder="Search here!!!"></input>
+             <input value={search} onChange={handleSearch} className="border px-12 py-2 rounded-[50px] w-100" placeholder="Search here!!!"></input>
              <FaSearch className="h-10 w-10 border px-2 py-2 rounded-[50%]  absolute left-0"/>
         </div>
 

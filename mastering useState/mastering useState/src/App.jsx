@@ -11,6 +11,7 @@ import Exercise5 from './components/exercise5'
 import Exercise6 from './components/exercise6'
 import Exercise7 from './components/exercise7'
 import Exercise8 from './components/exercise8'
+import Exercise9 from './components/exercise9';
 function App() {
   
 
@@ -20,7 +21,7 @@ function App() {
   }}
   // className='main font-["poppins"]  h-screen  w-full  flex justify-center   items-center'
   >
-  <Exercise8/>
+  <Exercise9/>
   </div>
   </>
 }
