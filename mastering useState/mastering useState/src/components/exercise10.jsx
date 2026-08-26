@@ -4,7 +4,11 @@ import { RxCross1 } from "react-icons/rx";
 
 function Exercise10(){
     //logical part  of  the scene!!
-    const [count,setCount]=useState(0);
+  
+    const price=0;
+
+
+
  
        const [data ,setData]= useState([
   {
@@ -13,7 +17,7 @@ function Exercise10(){
     description: "Lightweight sneakers with a comfortable design for everyday wear.",
     quantity: "12",
     color: "Black",
-    price: "129.99",
+    price: 129.99,
     image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
   },
   {
@@ -22,7 +26,7 @@ function Exercise10(){
     description: "Classic casual sneakers with a clean and timeless leather design.",
     quantity: "8",
     color: "White",
-    price: "89.99",
+    price: 89.99,
     image: "https://images.unsplash.com/photo-1549298916-b41d501d3772"
   },
   {
@@ -31,7 +35,7 @@ function Exercise10(){
     description: "High-performance running shoes with responsive cushioning.",
     quantity: "15",
     color: "Blue",
-    price: "159.99",
+    price: 159.99,
     image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5"
   },
   {
@@ -40,7 +44,7 @@ function Exercise10(){
     description: "Retro-inspired sneakers designed for everyday comfort and style.",
     quantity: "10",
     color: "Grey",
-    price: "99.99",
+    price: 99.99,
     image: "https://images.unsplash.com/photo-1539185441755-769473a23570"
   },
   {
@@ -49,7 +53,7 @@ function Exercise10(){
     description: "Iconic skate shoes featuring the classic Vans side stripe.",
     quantity: "20",
     color: "Black",
-    price: "74.99",
+    price: 74.99,
     image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77"
   },
   
@@ -57,7 +61,16 @@ function Exercise10(){
   
 ])
    // const [data,setData]=useState
-  
+  const handleClick=(ele)=>{
+    console.log(ele)
+    setData((data)=>{
+        return data.filter((newele)=>{
+            return newele.name!=ele.name;
+        })
+
+    })
+    
+  }
 
     
     return (<>
@@ -65,15 +78,18 @@ function Exercise10(){
         <div className="cart w-220 bg-white ">
             <div className="header flex justify-between px-24 py-10">
                 <div className="mini-header">
-                    <h1>Your Cart :  Total items:{count}</h1>
+                    <h1>Your Cart :  Total items:{data.length}</h1>
                 </div>
                 <div className="total-price">
-                    Total Price : 14000
+                    Total Price:{data.reduce((total,number)=>{
+                        return total+number.price;
+
+                    },0)}
                 </div>
             </div>
             <div className=" cards px-24">
                 <div className="line py-[1px] mt-2 mb-2 w-180 bg-zinc-400"></div>
-                <div className="card flex items-center   justify-between  py-2 px-2 ">
+                {/* <div className="card flex items-center   justify-between  py-2 px-2 ">
                     <div className="image">
                         <img  className=" h-40 w-40" src="https://i.pinimg.com/736x/5e/c5/1a/5ec51a44798a49d6b57044a25187c314.jpg"></img>
 
@@ -96,7 +112,7 @@ function Exercise10(){
                         </div>
                     </div>
                 </div>
-
+ */}
 
 
                 { data.map((ele)=>{
@@ -119,7 +135,11 @@ function Exercise10(){
                     <div className="price flex  flex-col items-center gap-10">
                         {ele.price}
                         <div className="">
-                            <RxCross1/>
+                            <button className="btn">
+                                  <RxCross1  onClick={()=>{handleClick(ele)}}className="bg-blue-400"/>
+
+                            </button>
+                          
                         </div>
                     </div>
                 </div>
