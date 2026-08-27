@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import {useEffect} from "react";
 import './App.css'
+import Exercise1 from './components/exercise1';
 
 function App() {
   const [count,setCount]=useState(0);
@@ -15,9 +16,7 @@ function App() {
   
 
   return <> 
-  <h1> here is the count  {count}</h1>
-  <button  onClick={handleClick} className="btn bg-blue-500 px-3 py-1 rounded-[20px]">increase++</button>
-
+  <Exercise1/>
   </>
   
       
