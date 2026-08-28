@@ -2,7 +2,8 @@ import { useState } from 'react'
 
 import {useEffect} from "react";
 import './App.css'
-import Exercise1 from './components/exercise1';
+import Exercise12and3 from './components/exercise1';
+import Exercise4 from './components/exericse4';
 
 function App() {
   const [count,setCount]=useState(0);
@@ -16,7 +17,7 @@ function App() {
   
 
   return <> 
-  <Exercise1/>
+  <Exercise4/>
   </>
   
       

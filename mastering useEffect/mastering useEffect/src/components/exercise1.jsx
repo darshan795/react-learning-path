@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect,useState } from "react";
 
-function Exercise1(){
+function Exercise12and3(){
 
     const [count,setCount]=useState(0);
 
@@ -29,19 +29,11 @@ function Exercise1(){
     const changeTheme=()=>{
         setTheme("dark");   
     }
-    useEffect(()=>{
-        console.log('here is the useeffect starts ')
-    },[count])
+  useEffect(()=>{
+    console.log("here is the useEffect is  running mother fucker!!");
 
-    useEffect(()=>{
+  },[count,name]);
 
-        console.log("the name is",name);
-        
-    },[name])
-
-    useEffect(()=>{
-        console.log("the theme is ",theme);
-    },[theme])
 
 
 
@@ -81,4 +73,4 @@ function Exercise1(){
     </>
 }
 
-export default Exercise1;
+export default Exercise12and3;
