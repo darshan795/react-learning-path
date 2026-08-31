@@ -6,6 +6,7 @@ import Exercise12and3 from './components/exercise1';
 import Exercise4 from './components/exericse4';
 import Exercise5 from './components/exercise5';
 import Exercise6 from './components/exercise6';
+import Exercise7 from './components/exercise7';
 function App() {
   const [count,setCount]=useState(0);
   useEffect(()=>{
@@ -18,7 +19,7 @@ function App() {
   
 
   return <> 
-  <Exercise6/>
+  <Exercise7/>
   </>
   
       
