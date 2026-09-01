@@ -10,7 +10,7 @@ function Exercise7(){
 
     useEffect(()=>{
         setTimeout(()=>{
-             fetch("https://jsonplaceholer.typicode.com/users")
+             fetch("https://jsonplaceholder.typicode.com/users")
         .then((res)=>{
             res.json().then((data)=>{setUser(data)   })
         }).catch((err)=>{

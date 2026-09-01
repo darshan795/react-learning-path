@@ -7,19 +7,13 @@ import Exercise4 from './components/exericse4';
 import Exercise5 from './components/exercise5';
 import Exercise6 from './components/exercise6';
 import Exercise7 from './components/exercise7';
+import Exercise8 from './components/exercise8';
 function App() {
-  const [count,setCount]=useState(0);
-  useEffect(()=>{
-    console.log("here is the first useEffect  exercise man!!")
-
-  },[count])
-  const handleClick=()=>{
-    setCount((prev)=>prev+1);
-  }
+  
   
 
   return <> 
-  <Exercise7/>
+  <Exercise8/>
   </>
   
       
