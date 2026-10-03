@@ -14,12 +14,13 @@ import Exercise6 from './components/exercise6'
 import Exercise8 from './components/exercise8'
 import Exercise9 from './components/exercise9'
 import Exercise10 from './components/exercise10'
+import Exercise11 from './components/exercise11'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Exercise10/>
+    <Exercise11/>
     
      
     </>
