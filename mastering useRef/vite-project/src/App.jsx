@@ -7,12 +7,21 @@ import './App.css'
 
 import Exercise12 from './components/exercise12'
 import Exercise13 from './components/exercise13'
+import Exercise14 from './components/exercise14'
+import { useCallback } from 'react'
 function App() {
   const [count, setCount] = useState(0)
-
+  const handleClick=useCallback(()=>{
+    setCount((prev)=>prev+1);
+    // console.log("bttn is clicked!!!");
+  }
+  ,[])
   return (
     <>
-    <Exercise13/>
+
+
+    <h1> Counter : {count}</h1>
+    <Exercise14  handleClick={handleClick}/>
     
      
     </>
