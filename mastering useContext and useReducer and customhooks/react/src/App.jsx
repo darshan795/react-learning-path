@@ -3,6 +3,9 @@
 
   import { createContext ,useContext,useState} from 'react'
   import ThemeSwitcher from './components/Exercise2';
+  import Exercise3 from './components/Exercise3';
+  import Cart from './components/Exercise4';
+  
   const userContext=createContext();
 
 
@@ -21,7 +24,8 @@
 
     return (
 
-    <><ThemeSwitcher/></>
+
+    <><Cart/></>
     )
   }
 
