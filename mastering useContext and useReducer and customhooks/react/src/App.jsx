@@ -5,6 +5,7 @@
   import ThemeSwitcher from './components/Exercise2';
   import Exercise3 from './components/Exercise3';
   import Cart from './components/Exercise4';
+  import Exercise5 from './components/Exercise5';
   
   const userContext=createContext();
 
@@ -25,7 +26,7 @@
     return (
 
 
-    <><Cart/></>
+    <><Exercise5></Exercise5></>
     )
   }
 
