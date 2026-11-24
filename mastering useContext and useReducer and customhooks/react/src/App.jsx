@@ -7,6 +7,9 @@
   import Cart from './components/Exercise4';
   import Exercise5 from './components/Exercise5';
   
+  import { BrowserRouter,Routes,Route } from 'react-router';
+  import Routers from './routers/routers';
+
   const userContext=createContext();
 
 
@@ -24,9 +27,11 @@
 
 
     return (
+     <>
+     <Routers/>
+     </>
 
-
-    <><Exercise5></Exercise5></>
+    
     )
   }
 
