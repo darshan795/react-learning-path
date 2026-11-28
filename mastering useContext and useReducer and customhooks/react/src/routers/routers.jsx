@@ -54,10 +54,16 @@ function Product(){
     
 
         const {id}=useParams();
+        ///dynamic routing 
         console.log(id)
 
 
-    return <> this is the Product page  {id} </>
+    return <> 
+    <h1 className='text-[20px]'>Student Details</h1>
+    <br></br>
+    
+    
+    Student Id is   {id} </>
 
 }
 
@@ -96,8 +102,12 @@ function Navbar(){
     return (
     <nav className='px-10 py-4 w-full bg-zinc-400 flex items-center gap-4'>
         <NavLink  to="/">Home</NavLink>
-         <NavLink to="/product">Product</NavLink>
+         <NavLink to="/student">student</NavLink>
           <NavLink to="/about">About</NavLink>
+            <NavLink to="/students">Student</NavLink>
+          
+
+
 
 
 
@@ -130,6 +140,14 @@ function Layout(){
     </>
 }
 
+function Student(){
+    return<>
+    <h1 className="text-[30px]"> welcome to th student dashboard</h1>
+    
+    
+    </>
+}
+
 
 function AppContent(){
 
@@ -144,11 +162,13 @@ function AppContent(){
     <Routes>
         <Route path="/" element={<Layout/>}>
             <Route index element={<Home/>}/>
+
             
-            <Route element={<ProtectedRoute isLoggedIn={false}/>} >
-            <Route path="product/:id" element={<Product/>}/>
+            {/* <Route element={<ProtectedRoute isLoggedIn={true}/>} > */}
+            <Route path="students" element={<Student/>}/>
+            <Route path="student/:id" element={<Product/>}/>
             <Route path="about" element={<About/>}/>
-            </Route>
+            {/* </Route> */}
 
 
             <Route path="*" element={<NotFound/>}/>
@@ -188,3 +208,4 @@ function Routers() {
 }
 
 export default Routers
+//this is then   thidkldjkddgh

@@ -71,7 +71,7 @@ import {
 
 // useSearchParams
 // Used to read and update query parameters in the URL,
-// such as ?category=shoes&sort=price.
+// such as ?category=shoes&sort=price.    
 
 // ---------------- HOME ----------------
 function Home() {
@@ -262,6 +262,7 @@ function AppContent() {
 
   return (
     <>
+    <BrowserRouter>
       <Navbar
         isLoggedIn={isLoggedIn}
         onLogout={handleLogout}
@@ -303,15 +304,10 @@ function AppContent() {
       </Routes>
 
       <LocationInfo />
+      </BrowserRouter>
     </>
   );
 }
 
 // ---------------- BROWSER ROUTER ----------------
-export default function App() {
-  return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
-  );
-}
+

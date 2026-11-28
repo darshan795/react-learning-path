@@ -10,6 +10,11 @@
   import { BrowserRouter,Routes,Route } from 'react-router';
   import Routers from './routers/routers';
 
+  import Exercise7 from './components/Exercise7';
+  import Signup from './components/Exercise8';
+  
+  
+  
   const userContext=createContext();
 
 
@@ -27,8 +32,9 @@
 
 
     return (
+
      <>
-     <Routers/>
+    <Exercise7/>
      </>
 
     
@@ -71,3 +77,4 @@
 
   }
   export default App
+  //this is the case we  have to follow motherfucker!!!
